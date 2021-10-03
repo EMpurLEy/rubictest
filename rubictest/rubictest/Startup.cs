@@ -12,8 +12,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using rubictest.Controllers;
-
-
+using rubictest.Contexts;
 
 namespace rubictest
 {
@@ -29,7 +28,9 @@ namespace rubictest
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services )
         {
-            services.AddDbContext<BudgetContext>(opt =>
+
+
+            services.AddDbContext<NoteContext>(opt =>
                 opt.UseInMemoryDatabase("Budget"));
             services.AddControllers();
         }
