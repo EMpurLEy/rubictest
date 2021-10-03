@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace rubictest.Contexts
 {
-    public class NoteContext : DbContext
+    public class UserContext : DbContext
     {
-        public NoteContext(DbContextOptions<NoteContext> options)
+        public UserContext(DbContextOptions<UserContext> options)
             : base(options)
         {
 
 
         }
-        public DbSet<Note> Notes { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }
